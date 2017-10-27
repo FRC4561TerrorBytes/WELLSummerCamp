@@ -20,8 +20,8 @@ Software Requirements:
 ### Quick Start Instructions
 1. Upload the file to the Arduino, plugged in via USB.
 2. Figure out the COM port currently assigned to your Arduino (the correct one will usually have a label saying it's an Arduino. If one fails, try another):
-![Find your COM port](http://oi67.tinypic.com/2njhrx5.jpg)
+![Find your COM port](http://i67.tinypic.com/2njhrx5.jpg)
 3. Open PuTTY and switch to Serial. Input the correct COM port and hit "Open".
-![Connect with PuTTY](http://i67.tinypic.com/2njhrx5.jpg)
+![Connect with PuTTY](http://i63.tinypic.com/nvxijs.jpg)
 
 This will open up a command prompt-style window where you can input letters like Serial Monitor in Arduino.
