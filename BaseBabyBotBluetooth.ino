@@ -1,23 +1,26 @@
 #include <AFMotor.h> // See https://learn.adafruit.com/adafruit-motor-shield/af-dcmotor-class for docs on this library
+#include <SoftwareSerial.h>
 
 AF_DCMotor motorL(1); 
 AF_DCMotor motorR(2);
 
+SoftwareSerial wireless (A0,A1);
+
 void setup() {
-  Serial.begin(9600);
-  Serial.print("Serial comms established.");
+  wireless.begin(9600); // Enable wireless communications over Bluetooth
+  wireless.print("wireless comms established.");
   
   motorR.setSpeed(0);
   motorR.run(FORWARD);
   motorL.setSpeed(0);
   motorL.run(FORWARD);
   
-  Serial.println("Robot booted.");
+  wireless.println("Robot booted.");
 }
 
 void loop() {
-  while(Serial.available()) {
-    int input = Serial.read();
+  while(wireless.available()) {
+    int input = wireless.read();
     if(input == 'w' || input == 'W') { 
         drive(255, 255);  // w = forward
     }
@@ -34,10 +37,10 @@ void loop() {
 }
 
 void drive(int speedL, int speedR) {
-  Serial.print("Driving motor: ");
-  Serial.print(speedL);
-  Serial.print(", ");
-  Serial.println(speedR);
+  wireless.print("Driving motor: ");
+  wireless.print(speedL);
+  wireless.print(", ");
+  wireless.println(speedR);
   
   // For the left motor...
   if (speedL > 0) {       // If speedL is positive, then...
@@ -58,4 +61,3 @@ void drive(int speedL, int speedR) {
   }
   motorR.setSpeed(speedR); // Either way, set the speed based on the number given.
 }
-

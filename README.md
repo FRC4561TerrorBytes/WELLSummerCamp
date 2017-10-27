@@ -1,8 +1,9 @@
 # Wade Edwards Learning Lab BabyBots
 
  * ``BaseBabyBot.ino`` is for making a babybot wired over USB, no match timers.
+ * ``BaseBabyBotBluetooth.ino`` is for making a babybot wired over USB, no match timers.
  * ``MatchBabyBot.ino`` is for use in matches for USB bots, and stops bots automatically after a specified time.
- * ``BaseBabyBotBluetooth.ino`` is for use in matches for Bluetooth-controlled bots.
+ * ``MatchBabyBotBluetooth.ino`` is for use in matches for Bluetooth-controlled bots.
  * ``MotorDrive.ino`` makes two motors drive forward at full speed. No input needed.
 
 Physical Requirements:
